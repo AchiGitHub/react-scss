@@ -1,0 +1,42 @@
+// Color system
+//
+$white: #fff !default;
+$gray-100: #f6fafe !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #afb5c1 !default;
+$gray-600: #6c757d !default;
+$gray-700: #4F5467 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+$blue: #137eff !default;
+$indigo: #6610f2 !default;
+$purple: #8b5edd !default;
+$pink: #e83e8c !default;
+$red: #fa5838 !default;
+$orange: #fb8c00 !default;
+$yellow: #ffbc34 !default;
+$green: #5ac146 !default;
+$teal: #20c997 !default;
+$cyan: #4fc3f7 !default;
+$primary: #7460ee !default;
+$colors: ( blue: $blue, indigo: $indigo, purple: $purple, pink: $pink, red: $red, orange: $orange, yellow: $yellow, green: $green, teal: $teal, cyan: $cyan, white: $white, gray: $gray-600, gray-dark: $gray-800);
+
+//background-color-system
+$main-body-bg: #fff !default;
+$body-bg: #f2f4f5;
+$body-color: #6a7a8c !default;
+
+//colors-based-on-buttons
+$primary: $blue !default;
+$secondary: $gray-600 !default;
+$success: $green !default;
+$info: $blue !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$light: $gray-100 !default;
+$dark: $gray-800 !default;
+$cyan: $cyan !default;
+$orange: $orange !default;
