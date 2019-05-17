@@ -1,0 +1,103 @@
+@import './colors.scss';
+
+
+
+@mixin btn-theme($btn-class) {
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+    padding: .34rem 1.04rem;
+    border: none;
+    outline: none;
+    border-radius: 0.125rem; //change to set to round buttons
+    cursor: pointer;
+    // white-space: normal;
+    word-wrap: break-word;
+    color: #fff; //button font-color
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    //tranformations
+    -webkit-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+    -o-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+
+
+    @if($btn-class=='btn-primary') {
+        background-color: $primary;
+
+        &:hover {
+            background-color: $primary-hover;
+        }
+    }
+
+    @else if($btn-class=='btn-secondary') {
+        background-color: $secondary;
+
+        &:hover {
+            background-color: $green;
+        }
+    }
+
+    @else if($btn-class=='btn-warning') {
+        background-color: $warning;
+
+        &:hover {
+            background-color: $cyan;
+        }
+    }
+
+    @else if($btn-class=='btn-info') {
+        background-color: $info;
+
+        &:hover {
+            background-color: $cyan;
+        }
+    }
+
+    @else if($btn-class=='btn-danger') {
+        background-color: $danger;
+
+        &:hover {
+            background-color: $cyan;
+        }
+    }
+
+    @else if($btn-class=='btn-light') {
+        background-color: $light;
+
+        &:hover {
+            background-color: $cyan;
+        }
+    }
+
+}
+
+@mixin theme-primary($param) {
+    @if($param=='ui-message') {
+        background: $message-background !important;
+    }
+    @else if($param=='ui-header') {
+        background: $header-text-color !important;
+    }
+    @else if($param=='header') {
+        color: $header-text-color !important;
+    }
+
+    @else if($param=='card') {
+        background-color: $card-background-color !important;
+    }
+
+    @else if($param=='label') {
+        color: $label-text-color !important;
+    }
+
+    @else if($param=='button') {
+        background-color: $button-background !important;
+    }
+
+    @else if($param=='input') {
+        color: $input-text !important;
+        background-color: $input-background-color !important;
+    }
+}
