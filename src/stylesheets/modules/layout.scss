@@ -1,0 +1,17 @@
+@import '../abstracts/colors.scss';
+
+.success{
+    background-color: $primary;
+}
+
+.button{
+    &.btn-primary{
+        background-color: $primary;
+    }
+    &.btn-success{
+        background-color: $success;
+    }
+    &.btn-warning{
+        background-color: $warning;
+    }
+}

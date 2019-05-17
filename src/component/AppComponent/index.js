@@ -4,7 +4,7 @@ import '.././../stylesheets/main.scss';
 export class index extends Component {
   render() {
     return (
-      <button className='primary'>Click</button>
+      <div className='button btn-success' style={{padding:'10%'}}>Primary</div>
     )
   }
 }
