@@ -1,8 +1,11 @@
 import React, { Component } from 'react'
 import { Dimmer, Grid, Loader, Label, Form, Card, Button, Message, Image, Segment, Icon, Divider } from "semantic-ui-react";
-import '.././../stylesheets/main.scss';
+
 
 export class login extends Component {
+    // componentWillMount(){
+    //     require('.././../stylesheets/main.scss')
+    //   }
     render() {
         return (
             <Grid textAlign='center' style={{ height: '100%' }} verticalAlign='middle' >
@@ -38,7 +41,6 @@ export class login extends Component {
                                     </Card.Description>
                                 </Card.Content>
                             </Card>
-                            <Label>Hello</Label>
                         </Segment>
                     </Grid.Column>
                 </Grid.Row>

@@ -1,0 +1,47 @@
+@import '../../abstracts/colors.scss';
+
+.dark {
+    .ui.message {
+        @include theme-background('ui-message', $teal);
+
+        .header {
+            @include theme-background('ui-header', $primary);
+        }
+    }
+
+    .ui.menu {
+        @include theme-background('ui-message', $secondary);
+    }
+
+    .ui.label {
+        @include theme-font('ui-label', $warning);
+        @include theme-background('ui-label' , $red)
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        @include theme-font('header', $gray-100);
+    }
+
+    a {
+        @include theme-font('label', $teal)
+    }
+
+    label {
+        @include theme-font('label', $teal);
+    }
+
+    button {
+        @include theme-background('button', $pink)
+    }
+
+    input {
+        @include theme-font('input', $teal)
+    }
+
+    .card {
+        @include theme-background('card', $teal);
+    }
+}

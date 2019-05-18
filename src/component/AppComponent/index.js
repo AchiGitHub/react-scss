@@ -1,8 +1,13 @@
 import React, { Component } from 'react'
 import {Message , Label} from 'semantic-ui-react';
-import '.././../stylesheets/main.scss';
+// import '.././../stylesheets/main.scss';
 
 export class index extends Component {
+
+  componentWillMount(){
+    // require('.././../stylesheets/main.scss')
+  }
+
   render() {
     return (
       <div>

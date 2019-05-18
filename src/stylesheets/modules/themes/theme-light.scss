@@ -1,0 +1,42 @@
+@import '../../abstracts/colors.scss';
+
+.light {
+    .ui.message {
+        @include theme-background('ui-message', $gray-700);
+
+        .header {
+            @include theme-background('ui-header', $gray-600);
+        }
+    }
+
+    .ui.menu {
+        @include theme-background('ui-message', $cyan);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        @include theme-font('header', $gray-700);
+    }
+
+    a {
+        @include theme-font('label', $black)
+    }
+
+    label {
+        @include theme-font('label', $red);
+    }
+
+    button {
+        @include theme-background('button', $orange)
+    }
+
+    input {
+        @include theme-font('input', $red)
+    }
+
+    .card {
+        @include theme-background('card', $red);
+    }
+}
