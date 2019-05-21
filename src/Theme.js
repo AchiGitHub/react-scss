@@ -13,15 +13,15 @@ class ThemeManager extends Component {
     }
 
     componentWillMount() {
-        document.body.style.backgroundColor =  'red';
+        document.body.style.backgroundColor =  '#7f7f7f';
     }
     
     componentDidUpdate(){
         if(this.state.selectedTheme === 'light'){
-            document.body.style.backgroundColor =  'red';
+            document.body.style.backgroundColor =  '#7f7f7f';
         }
         else if(this.state.selectedTheme === 'dark'){
-            document.body.style.backgroundColor =  '#000';
+            document.body.style.backgroundColor =  '#21232F';
         }
     }
 

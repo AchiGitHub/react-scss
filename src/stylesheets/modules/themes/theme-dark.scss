@@ -3,39 +3,39 @@
 
 .dark {
     .ui.message {
-        @include theme-background('ui-message', $teal);
+        @include theme-background('ui-message', $ui-message-background-color);
 
         .header {
-            @include theme-background('ui-header', $primary);
+            @include theme-background('ui-header', $ui-message-header-background-color);
         }
     }
 
     .ui.menu {
-        @include theme-background('ui-message', $secondary);
+        @include theme-background('ui-nav', $ui-menu-background-color);
     }
 
     .ui.label {
-        @include theme-font('ui-label', $warning);
-        @include theme-background('ui-label' , $red)
+        @include theme-font('ui-label', $ui-label-font-color);
+        @include theme-background('ui-label' , $ui-label-background-color)
     }
 
     h1,
     h2,
     h3,
     h4 {
-        @include theme-font('header', $gray-100);
+        @include theme-font('header', $default-header);
     }
 
     a {
-        @include theme-font('label', $teal)
+        @include theme-font('label', $link)
     }
 
     label {
-        @include theme-font('label', $teal);
+        @include theme-font('label', $default-label);
     }
 
     button {
-        @include theme-background('button', $pink)
+        @include theme-background('button', $button)
     }
 
     input {
@@ -43,6 +43,19 @@
     }
 
     .card {
-        @include theme-background('card', $teal);
+        @include theme-background('card', $body-color);
     }
+
+    .ui.card>:first-child, .ui.cards>.card>:first-child{
+        @include theme-background('ui-card-header-background', $gray-700);
+    }
+
+    .ui.modal>.header{
+        @include theme-background('ui-modal-header-background', $red);
+    }
+
 }
+
+// .ui.modal>.header{
+//     @include theme-background('ui-modal-header-background', $red);
+// }

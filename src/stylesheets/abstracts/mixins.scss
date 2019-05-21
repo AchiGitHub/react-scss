@@ -25,20 +25,26 @@
         background: $color !important;
     }
 
-    @else if($param=='ui-header', $color) {
+    @else if($param=='ui-header') {
         background: $color !important;
     }
 
-    @else if($param=='card', $color) {
+    @else if($param=='card') {
         background-color: $color !important;
     }
 
-    @else if($param=='button', $color) {
+    @else if($param=='button') {
         background-color: $color !important;
     }
 
-    @else if($param=='input', $color) {
+    @else if($param=='input') {
         color: $color !important;
         background-color: $color !important;
+    }
+    @else if($param=='ui-nav') {
+        background: $color !important;
+    }
+    @else if($param=='ui-modal-header-background') {
+        background: $color !important;
     }
 }
