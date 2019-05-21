@@ -14,10 +14,12 @@ export class login extends Component {
                         <Image style={{ marginTop: '40px' }} />
                         <Segment basic>
                             <Card fluid raised={true} >
-                                <Card.Content className='login-form'>
+                                <Card.Content className='login-form-header'>
                                     <Card.Header className='login-form'>
                                         <h3>Guest Wi-Fi Login</h3>
                                     </Card.Header>
+                                </Card.Content>
+                                <Card.Content className='login-form'>
                                     <Card.Description style={{ marginTop: '20px' }}>
                                         <Form size={'large'}>
                                             <Form.Group>

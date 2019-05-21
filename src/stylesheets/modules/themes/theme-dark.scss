@@ -1,5 +1,6 @@
 @import '../../abstracts/colors.scss';
 
+
 .dark {
     .ui.message {
         @include theme-background('ui-message', $teal);

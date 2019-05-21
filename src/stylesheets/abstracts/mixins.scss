@@ -5,6 +5,15 @@
     @else if($param=='h1', $color) {
         color: $color !important;
     }
+    @else if($param=='h2', $color) {
+        color: $color !important;
+    }
+    @else if($param=='h3', $color) {
+        color: $color !important;
+    }
+    @else if($param=='h4', $color) {
+        color: $color !important;
+    }
     @else if($param=='ui-label', $color) {
         color: $color !important;
     }
