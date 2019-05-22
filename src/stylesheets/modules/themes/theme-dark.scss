@@ -34,8 +34,8 @@
         @include theme-font('label', $default-label);
     }
 
-    button {
-        @include theme-background('button', $button)
+    .button-confirm {
+        @include theme-background('button', $button-success)
     }
 
     input {
@@ -53,9 +53,4 @@
     .ui.modal>.header{
         @include theme-background('ui-modal-header-background', $red);
     }
-
 }
-
-// .ui.modal>.header{
-//     @include theme-background('ui-modal-header-background', $red);
-// }

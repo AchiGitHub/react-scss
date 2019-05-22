@@ -24,6 +24,7 @@ export class login extends Component {
 
 
     render() {
+        console.log(this.props)
         return (
             <Grid textAlign='center' style={{ height: '100%' }} verticalAlign='middle' >
                 <Grid.Row >
@@ -44,7 +45,7 @@ export class login extends Component {
                                                 <Form.Input icon='lock' width={'16'} label='Password' control='input' placeholder='Password' type='Password' />
                                             </Form.Group>
                                             <Form.Field >
-                                                <Button type='submit' color='blue' size='mini' floated='right' onClick={this.toggle}  > <Icon name='sign in' /> Login</Button>
+                                                <Button type='submit' color='blue' size='mini' floated='right' onClick={this.toggle} className='button-confirm' > <Icon name='sign in' /> Login</Button>
                                             </Form.Field>
                                             <Divider hidden />
                                             <Form.Field style={{ marginTop: '10%' }}>
@@ -61,7 +62,7 @@ export class login extends Component {
                         </Segment>
                     </Grid.Column>
                 </Grid.Row>
-                <ConfirmationModal open={this.state.open} onClick={this.toggle} />
+                <ConfirmationModal open={this.state.open} onClick={this.toggle}/>
             </Grid>
         )
     }

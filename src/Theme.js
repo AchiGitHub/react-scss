@@ -14,14 +14,20 @@ class ThemeManager extends Component {
 
     componentWillMount() {
         document.body.style.backgroundColor =  '#7f7f7f';
+        document.body.classList.add('light');
+        document.body.classList.remove('dark');
     }
     
     componentDidUpdate(){
         if(this.state.selectedTheme === 'light'){
             document.body.style.backgroundColor =  '#7f7f7f';
+            document.body.classList.add('light');
+            document.body.classList.remove('dark');
         }
         else if(this.state.selectedTheme === 'dark'){
             document.body.style.backgroundColor =  '#21232F';
+            document.body.classList.add('dark');
+            document.body.classList.remove('light');
         }
     }
 
@@ -39,9 +45,7 @@ class ThemeManager extends Component {
     render() {
         return (
             <>
-                <div className={this.state.selectedTheme}>
-                    <App />
-                </div>
+                <App />
                 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                     <Dropdown
                         placeholder='Select a theme'
