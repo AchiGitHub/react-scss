@@ -16,7 +16,7 @@
 
     .ui.label {
         @include theme-font('ui-label', $ui-label-font-color);
-        @include theme-background('ui-label' , $ui-label-background-color)
+        @include theme-background('ui-label', $ui-label-background-color)
     }
 
     h1,
@@ -31,7 +31,7 @@
     }
 
     label {
-        @include theme-font('label', $default-label);
+        @include theme-font('label', $link)
     }
 
     .button-confirm {
@@ -42,15 +42,27 @@
         @include theme-font('input', $teal)
     }
 
-    .card {
-        @include theme-background('card', $body-color);
+    //card styles
+    .ui.card {
+        .header {
+            @include theme-background('card-header', $gray-900)
+        }
+
+        //Card.Content
+        .content {
+            @include theme-background('card-content', $gray-500)
+        }
+
+        //Labels inside the card
+        label {
+            @include theme-font('card-label', $black);
+        }
     }
 
-    .ui.card>:first-child, .ui.cards>.card>:first-child{
-        @include theme-background('ui-card-header-background', $gray-700);
-    }
-
-    .ui.modal>.header{
-        @include theme-background('ui-modal-header-background', $red);
+    //modal styles
+    .ui.modal {
+        .header {
+            @include theme-background('ui-modal-header-background', $red);
+        }
     }
 }

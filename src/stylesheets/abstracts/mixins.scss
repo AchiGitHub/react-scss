@@ -14,7 +14,7 @@
     @else if($param=='h4', $color) {
         color: $color !important;
     }
-    @else if($param=='ui-label', $color) {
+    @else if($param=='card-label', $color) {
         color: $color !important;
     }
 }
@@ -29,7 +29,7 @@
         background: $color !important;
     }
 
-    @else if($param=='card') {
+    @else if($param=='card-content') {
         background-color: $color !important;
     }
 
@@ -45,6 +45,9 @@
         background: $color !important;
     }
     @else if($param=='ui-modal-header-background') {
+        background: $color !important;
+    }
+    @else if($param=='card-header') {
         background: $color !important;
     }
 }

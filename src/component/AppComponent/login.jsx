@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import { Dimmer, Grid, Loader, Label, Form, Card, Button, Message, Image, Segment, Icon, Divider } from "semantic-ui-react";
-import ConfirmationModal from '../confirmationModal/confirmationModal';
+import { Dimmer, Grid, Modal, Loader, Label, Form, Card, Button, Message, Image, Segment, Icon, Divider } from "semantic-ui-react";
 
 export class login extends Component {
     // componentWillMount(){
@@ -11,10 +10,13 @@ export class login extends Component {
         this.state = {
             open: false
         }
-        this.toggle = this.toggle.bind(this)
+        this.toggle = this.toggle.bind(this);
     }
 
-    // show = () => () => this.setState({ open: true })
+    show = () => this.setState({ open: true })
+    close = () => {
+        this.setState({ open: false })
+    }
 
     toggle = () => {
         this.setState({
@@ -24,7 +26,7 @@ export class login extends Component {
 
 
     render() {
-        console.log(this.props)
+        // console.log(this.props)
         return (
             <Grid textAlign='center' style={{ height: '100%' }} verticalAlign='middle' >
                 <Grid.Row >
@@ -62,8 +64,18 @@ export class login extends Component {
                         </Segment>
                     </Grid.Column>
                 </Grid.Row>
-                <ConfirmationModal open={this.state.open} onClick={this.toggle}/>
+                <Modal open={this.state.open} onClose={this.close.bind(this)}>
+                    <Modal.Header>Delete Your Account</Modal.Header>
+                    <Modal.Content>
+                        <p>Are you sure you want to delete your account</p>
+                    </Modal.Content>
+                    <Modal.Actions>
+                        <Button onClick={this.close.bind(this)} negative>No</Button>
+                        <Button primary onClick={this.close.bind(this)} className='button-confirm' positive icon='checkmark' labelPosition='right' content='Yes' />
+                    </Modal.Actions>
+                </Modal>
             </Grid>
+
         )
     }
 }
