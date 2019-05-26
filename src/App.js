@@ -11,7 +11,6 @@ class App extends Component {
       <>
         <NavBar />
         <Login />
-        <TestComponent/>
       </>
     )
   }

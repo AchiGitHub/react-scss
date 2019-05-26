@@ -9,7 +9,7 @@
 }
 
 %input {
-    @include theme-font('input', $gray-300)
+    @include theme-font('input', $gray-700)
 }
 
 %success-input {
@@ -78,23 +78,23 @@
     }
 
     .button-confirm {
-        @include theme-background('button', $button-success)
+        @include theme-background('button', $button-success-dark)
     }
 
     //card styles
     .ui.card {
         .header {
-            @include theme-background('card-header', $gray-900)
+            @include theme-background('card-header', $card-header-dark)
         }
 
         //Card.Content
         .content {
-            @include theme-background('card-content', $gray-500)
+            @include theme-background('card-content', $card-content-dark)
         }
 
         //Labels inside the card
         .fields label {
-            @include theme-font('card-label', $black);
+            @include theme-font('card-label', $card-label-dark);
         }
 
         .fields input {
@@ -135,15 +135,15 @@
     //forms
     .ui.forms {
         .header {
-            @include theme-background('ui-title-header-background', $modal-header);
+            @include theme-background('ui-form-header-background', $modal-header);
         }
 
         .content {
-            @include theme-background('ui-title-content-background', $modal-content);
+            @include theme-background('ui-form-content-background', $modal-content);
         }
 
         .image {
-            @include theme-background('ui-title-image-background', $modal-content);
+            @include theme-background('ui-form-image-background', $modal-content);
         }
 
         .header {
