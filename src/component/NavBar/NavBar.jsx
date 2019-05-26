@@ -23,7 +23,7 @@ export class NavBar extends Component {
       //       // return <Menu.Item name={name.name}>{name.name}</Menu.Item>
       //       if(name.sub !== null){
       //         name.sub.map((subMenu,index)=>{
-      //         //  console.log(subMenu.name)
+      //  
       //         return <Menu.Item name={subMenu.name}>{subMenu.name}</Menu.Item>
       //         //    <Dropdown item text={name.name}>
       //         //   <Dropdown.Menu>

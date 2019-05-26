@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Index from './component/AppComponent/index';
+import TestComponent from './component/TestComponent';
 import Login from './component/AppComponent/login';
 import './stylesheets/main.scss';
 import NavBar from './component/NavBar/NavBar';
@@ -11,6 +11,7 @@ class App extends Component {
       <>
         <NavBar />
         <Login />
+        <TestComponent/>
       </>
     )
   }

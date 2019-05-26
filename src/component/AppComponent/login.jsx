@@ -24,9 +24,7 @@ export class login extends Component {
         })
     }
 
-
     render() {
-        // console.log(this.props)
         return (
             <Grid textAlign='center' style={{ height: '100%' }} verticalAlign='middle' >
                 <Grid.Row >

@@ -2,25 +2,30 @@
     @if($param=='header', $color) {
         color: $color !important;
     }
+
     @else if($param=='h1', $color) {
         color: $color !important;
     }
+
     @else if($param=='h2', $color) {
         color: $color !important;
     }
+
     @else if($param=='h3', $color) {
         color: $color !important;
     }
+
     @else if($param=='h4', $color) {
         color: $color !important;
     }
+
     @else if($param=='card-label', $color) {
         color: $color !important;
     }
 }
 
 
-@mixin theme-background($param , $color){
+@mixin theme-background($param, $color) {
     @if($param=='ui-message') {
         background: $color !important;
     }
@@ -41,13 +46,24 @@
         color: $color !important;
         background-color: $color !important;
     }
+
     @else if($param=='ui-nav') {
         background: $color !important;
     }
+
     @else if($param=='ui-modal-header-background') {
         background: $color !important;
     }
+    @else if($param=='ui-modal-content-background') {
+        background: $color !important;
+    }
+
     @else if($param=='card-header') {
         background: $color !important;
     }
+
+    @else if($param=='input-background') {
+        background-color: $color !important;
+    }
+
 }

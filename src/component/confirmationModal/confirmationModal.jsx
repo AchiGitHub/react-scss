@@ -32,6 +32,13 @@ class confirmationModal extends Component {
                 <Modal.Actions>
                     <Button onClick={this.close.bind(this)} negative>No</Button>
                     <Button primary onClick={this.close.bind(this)} className='button-confirm' positive icon='checkmark' labelPosition='right' content='Yes' />
+                    <Modal.Header>
+                            <Modal.Content>
+                               <Form>
+                                   <Modal.Content> <Button onClick={this.close.bind(this)} className='button-confirm' positive icon='checkmark' labelPosition='right' content='Yes'/></Modal.Content>
+                                   </Form>  
+                            </Modal.Content>
+                    </Modal.Header>
                 </Modal.Actions>
             </Modal>
         )
