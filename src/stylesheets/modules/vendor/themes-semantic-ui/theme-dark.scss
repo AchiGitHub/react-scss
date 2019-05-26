@@ -1,4 +1,4 @@
-@import '../../abstracts/colors.scss';
+@import '../../../abstracts/colors.scss';
 
 %font-color {
     @include theme-font('ui-header', $ui-message-header-background-color)
