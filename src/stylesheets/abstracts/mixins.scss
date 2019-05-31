@@ -1,69 +1,33 @@
-@mixin theme-font($param, $color) {
-    @if($param=='header', $color) {
-        color: $color !important;
-    }
+@import './colors.scss';
 
-    @else if($param=='h1', $color) {
-        color: $color !important;
-    }
 
-    @else if($param=='h2', $color) {
-        color: $color !important;
-    }
+$current-theme: null !default;
 
-    @else if($param=='h3', $color) {
-        color: $color !important;
-    }
+@mixin themify($attr: null, $themes: $themes) {
 
-    @else if($param=='h4', $color) {
-        color: $color !important;
-    }
+    @each $theme,
+    $map in $themes {
+        // Define current theme
+        $current-theme: map-get($themes, $theme) !global;
 
-    @else if($param=='card-label', $color) {
-        color: $color !important;
+        // Themify 
+        @if $attr==null {
+            .#{$theme} & {
+                @content;
+            }
+        }
+
+        @else {
+            // &[data-#{$attr}="#{$theme}"] {
+            //     @content;
+            // }
+        }
+
+        // reset current theme
+        $current-theme: null !global;
     }
 }
 
-
-@mixin theme-background($param, $color) {
-    @if($param=='ui-message') {
-        background: $color !important;
-    }
-
-    @else if($param=='ui-header') {
-        background: $color !important;
-    }
-
-    @else if($param=='card-content') {
-        background-color: $color !important;
-    }
-
-    @else if($param=='button') {
-        background-color: $color !important;
-    }
-
-    @else if($param=='input') {
-        color: $color !important;
-        background-color: $color !important;
-    }
-
-    @else if($param=='ui-nav') {
-        background: $color !important;
-    }
-
-    @else if($param=='ui-modal-header-background') {
-        background: $color !important;
-    }
-    @else if($param=='ui-modal-content-background') {
-        background: $color !important;
-    }
-
-    @else if($param=='card-header') {
-        background: $color !important;
-    }
-
-    @else if($param=='input-background') {
-        background-color: $color !important;
-    }
-
+@function theme($query, $theme: $current-theme) {
+    @return map-get($theme, $query);
 }

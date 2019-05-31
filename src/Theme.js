@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import App from './App';
 import { Dropdown } from 'semantic-ui-react';
-
+import App from './App';
 
 class ThemeManager extends Component {
     constructor(props) {

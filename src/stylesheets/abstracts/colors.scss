@@ -483,3 +483,22 @@ $ui-input-background-color-light: $gray-200 !default;
 $ui-input-font-color-light: $gray-500 !default;
 $ui-label-font-color-light: $gray-7 !default;
 $ui-label-background-color-light: $gray-5 !default;
+
+$themes: (
+  dark: (
+    mainColor: #aa3939,
+    secondaryColor: #D46A6A,
+    labelColor:#fff,
+    cardLabelHeader:#fff,
+    modalHeader:#d334,
+    modalContent:#fff,
+    modalImage:#fff,
+    
+  ),
+  light: (
+    mainColor: #2e4272,
+    secondaryColor: #4f628e,
+    labelColor: #5454,
+    modalHeader:#d334
+  )
+);
