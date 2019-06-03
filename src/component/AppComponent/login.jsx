@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Dimmer, Grid, Modal, Loader, Label, Form, Card, Button, Message, Image, Segment, Icon, Divider } from "semantic-ui-react";
+import { Dimmer, Grid, Modal, Loader, Label, Form, Card, Button, Message, Image, Segment, Icon, Divider, Input } from "semantic-ui-react";
 
 export class login extends Component {
     // componentWillMount(){
@@ -28,24 +28,24 @@ export class login extends Component {
         return (
             <Grid textAlign='center' style={{ height: '100%' }} verticalAlign='middle' >
                 <Grid.Row >
-                    <Grid.Column style={{ maxWidth: 450 }}>
-                        <Image style={{ marginTop: '40px' }} />
+                    <Grid.Column style={{ maxWidth: 400, height: "100%", marginTop: "8%" }}>
                         <Segment basic>
                             <Card fluid raised={true} >
-                                <Card.Header className='login-form'>
-                                    <h3>Guest Wi-Fi Login</h3>
+                                <Card.Header className='login-form' style={{ padding: "25px" }}>
+                                    <h3>Guest Wi-Fi</h3>
                                 </Card.Header>
                                 <Card.Content className='login-form'>
-                                    <Card.Description style={{ marginTop: '20px' }}>
-                                        <Form size={'large'}>
+                                    <h3 style={{ color: "#000" }}>Log-in</h3>
+                                    <Card.Description>
+                                        <Form size={'large'} >
                                             <Form.Group>
-                                                <Form.Input icon='user' width={'16'} label='Username' control='input' placeholder='Username' />
+                                                <Input icon='user' control='input' placeholder='Username' />
                                             </Form.Group>
                                             <Form.Group >
-                                                <Form.Input icon='lock' width={'16'} label='Password' control='input' placeholder='Password' type='Password' />
+                                                <Input icon='lock' style={{ marginTop: "10px" }} control='input' placeholder='Password' type='Password' />
                                             </Form.Group>
                                             <Form.Field >
-                                                <Button type='submit' color='blue' size='mini' floated='right' onClick={this.toggle} className='button-confirm' > <Icon name='sign in' /> Login</Button>
+                                                <Button type='submit' color='blue' style={{ width: "70%", marginTop: "25px" }} onClick={this.toggle} className='button-confirm' > <Icon name='sign in' /> Login</Button>
                                             </Form.Field>
                                             <Divider hidden />
                                             <Form.Field style={{ marginTop: '10%' }}>

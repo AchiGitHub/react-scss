@@ -1,33 +1,12 @@
 @import '../../../abstracts/colors.scss';
 @import '../../../abstracts/mixins.scss';
 
-.ui.card {
-    .header {
-        @include themify() {
-            background-color: theme('secondaryColor');
-        }
-    }
-
-    //Card.Content
-    .content {
-        @include themify() {
-            background-color: theme('mainColor');
-        }
-    }
-
-    label{
-        @include themify() {
-            color: theme('modalHeader');
-        }
-    }
-}
-
 h1,
 h2,
 h3,
 h4 {
     @include themify() {
-        color: theme('labelColor');
+        color: theme('headerFontColor');
     }
 }
 
@@ -45,123 +24,172 @@ label {
 
 input {
     @include themify() {
-        color: theme('mainColor');
-    }
-}
-.ui.message {
-    @include themify() {
-        color: theme('mainColor');
-    }
-
-    .header {
-        @include themify() {
-            color: theme('mainColor');
-        }
+        color: theme('inputTextColor');
+        background-color: ('inputBackgroundColor');
     }
 }
 
-.ui.menu {
-    @include themify() {
-        color: theme('mainColor');
+.ui {
+    .card {
+
+        //-----------------------------------//
+        //remove on the deafult theme
+        box-shadow: none !important;
+
+        .header {
+            @include themify() {
+                background: theme('headerBackground');
+            }
+        }
+
+        //Card.Content
+        .content {
+            @include themify() {
+                background-color: theme('');
+            }
+        }
+
+        label {
+            @include themify() {
+                color: theme('modalHeader');
+            }
+        }
+    }
+
+    //ui message attributes
+    .message {
+        @include themify() {
+            color: theme('messageFontColor');
+        }
+
+        .header {
+            @include themify() {
+                color: theme('messageHeaderColor');
+            }
+        }
+    }
+
+    //ui input values colors
+    input {
+        @include themify() {
+            color: theme('inputTextColor');
+            background-color: theme('inputBackgroundColor');
+        }
+    }
+
+    .form {
+        .header {
+            @include themify() {
+                color: theme('mainColor');
+            }
+        }
+
+        .content {
+            @include themify() {
+                color: theme('mainColor');
+            }
+        }
+
+        .image {
+            @include themify() {
+                color: theme('mainColor');
+            }
+        }
+
+        .header {
+            @include themify() {
+                color: theme('mainColor');
+            }
+        }
+        //button in the 
+        .field {
+            .button-confirm {
+                @include themify() {
+                    background-color: theme('buttonSuccess')
+                }
+            }  
+            .button-confirm:hover {
+                @include themify() {
+                    background-color: theme('mainColor')
+                }
+            }  
+        } 
+
+        .content {
+            @include themify() {
+                color: theme('mainColor');
+            }
+        }
+
+        .fields {
+
+            align-items: center;
+            justify-content: center;    
+
+            label {
+                @include themify() {
+                    color: theme('mainColor');
+                }
+            }
+    
+            input {
+                @include themify() {
+                    color: theme('inputTextColor') !important;
+                    background: theme('inputBackgroundColor') !important;
+                    // background: ('inputBackgroundColor');
+                }
+            }    
+            .menu {
+                @include themify() {
+                    color: theme('mainColor');
+                }
+            }
+        }
+    }
+
+    .label {
+        @include themify() {
+            color: theme('mainColor');
+        }
+    }
+
+    .modal {
+        .header {
+            @include themify() {
+                color: theme('mainColor');
+            }
+        }
+
+        .content {
+            @include themify() {
+                color: theme('');
+            }
+        }
+
+        .image {
+            @include themify() {
+                color: theme('mainColor');
+            }
+        }
+    }
+
+    .items {
+        .header {
+            @include themify() {
+                color: theme('mainColor');
+            }
+        }
+
+        .content {
+            @include themify() {
+                color: theme('mainColor');
+            }
+        }
+
+        .image {
+            @include themify() {
+                color: theme('mainColor');
+            }
+        }
     }
 }
-
-.ui input {
-    @include themify() {
-        color: theme('mainColor');
-    }
-}
-
-.ui.label {
-    @include themify() {
-        color: theme('mainColor');
-    }
-}
-
-//modal styles
-.ui.modal {
-    .header {
-        @include themify() {
-            color: theme('mainColor');
-        }
-    }
-
-    .content {
-        @include themify() {
-            color: theme('mainColor');
-        }
-    }
-
-    .image {
-        @include themify() {
-            color: theme('mainColor');
-        }
-    }
-}
-
-//item styles
-.ui.items {
-    .header {
-        @include themify() {
-            color: theme('mainColor');
-        }
-    }
-
-    .content {
-        @include themify() {
-            color: theme('mainColor');
-        }
-    }
-
-    .image {
-        @include themify() {
-            color: theme('mainColor');
-        }
-    }
-}
-
-//forms
-.ui.forms {
-    .header {
-        @include themify() {
-            color: theme('mainColor');
-        }
-    }
-
-    .content {
-        @include themify() {
-            color: theme('mainColor');
-        }
-    }
-
-    .image {
-        @include themify() {
-            color: theme('mainColor');
-        }
-    }
-
-    .header {
-        @include themify() {
-            color: theme('mainColor');
-        }
-    }
-
-    .content {
-        @include themify() {
-            color: theme('mainColor');
-        }
-    }
-
-    .fields label {
-        @include themify() {
-            color: theme('mainColor');
-        }
-    }
-
-    .fields input {
-        @include themify() {
-            color: theme('mainColor');
-        }
-    }
-}
-

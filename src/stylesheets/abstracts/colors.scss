@@ -484,21 +484,37 @@ $ui-input-font-color-light: $gray-500 !default;
 $ui-label-font-color-light: $gray-7 !default;
 $ui-label-background-color-light: $gray-5 !default;
 
+$header-background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+
 $themes: (
   dark: (
-    mainColor: #aa3939,
-    secondaryColor: #D46A6A,
+    mainColor: #4d6fe9,
+    secondaryColor:#fff,
     labelColor:#fff,
     cardLabelHeader:#fff,
-    modalHeader:#d334,
+    modalHeader:#2A1B3D,
     modalContent:#fff,
     modalImage:#fff,
-    
+    inputTextColor:  rbg(42,27,61,0.87),
+    inputBackgroundColor: #fff,
+    headerFontColor:#fff,
+    headerBackground:  linear-gradient(232deg, rgba(128,101,67,0.549209373584692) 21%, rgba(51,38,110,0.8) 68%),
+    buttonSuccess:#00bbe1,
+    messageHeaderColor: #2D5F5D
   ),
   light: (
-    mainColor: #2e4272,
-    secondaryColor: #4f628e,
-    labelColor: #5454,
-    modalHeader:#d334
+    mainColor: #4d6fe9,
+    secondaryColor:#fff,
+    labelColor:#fff,
+    cardLabelHeader:#fff,
+    modalHeader:#2A1B3D,
+    modalContent:#fff,
+    modalImage:#fff,
+    inputTextColor:  rbg(42,27,61,0.87),
+    inputBackgroundColor: #fff,
+    headerFontColor:#fff,
+    headerBackground:  linear-gradient(159deg, rgba(85,102,168,0.8) 40%, rgba(40,149,195,0.8) 80%),
+    buttonSuccess:#00bbe1,
+    messageHeaderColor: #2D5F5D
   )
 );
