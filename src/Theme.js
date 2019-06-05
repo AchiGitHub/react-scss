@@ -24,11 +24,11 @@ class ThemeManager extends Component {
             document.body.classList.remove('dark');
         }
         else if(this.state.selectedTheme === 'dark'){
-            document.body.style.backgroundImage =  'linear-gradient(39deg, rgba(128,101,67,0.812977489526721) 21%, rgba(51,38,110,0.8) 68%)';
+            document.body.style.backgroundImage =  'linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%)';
             document.body.classList.add('dark');
             document.body.classList.remove('light');
         }else if(this.state.selectedTheme === 'default'){
-            document.body.style.backgroundImage =  '#fff';
+            document.body.style.background =  '#fff';
             document.body.classList.add('default');
             document.body.classList.remove('light');            
             document.body.classList.remove('dark');

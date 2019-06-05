@@ -1,6 +1,12 @@
 @import '../../../abstracts/colors.scss';
 @import '../../../abstracts/mixins.scss';
 
+body {
+    @include themify() {
+        background: theme('bodyBackground') !important
+    }
+}
+
 h1,
 h2,
 h3,
@@ -29,167 +35,195 @@ input {
     }
 }
 
-.ui {
-    .card {
+.button-fail {
+    @include themify() {
+        color: theme('buttonFailFontColor') !important;
+        background: theme('buttonFailBackgroundColor') !important;
+    }
+}
 
-        //-----------------------------------//
-        //remove on the deafult theme
-        box-shadow: none !important;
+.button-success {
+    @include themify() {
+        color: theme('buttonSuccessFontColor') !important;
+        background: theme('buttonSuccessBackgroundColor') !important;
+    }
+}
 
-        .header {
-            @include themify() {
-                background: theme('headerBackground');
-            }
-        }
+//label styles
+.ui.label {
+    background: #730000fa !important
+}
 
-        //Card.Content
-        .content {
-            @include themify() {
-                background-color: theme('');
-            }
-        }
+.ui.card {
+    //-----------------------------------//
+    //remove on the deafult theme
+    // box-shadow: none !important;
 
-        label {
-            @include themify() {
-                color: theme('modalHeader');
-            }
-        }
+    @include themify() {
+        box-shadow: theme('boxShadow') !important;
     }
 
-    //ui message attributes
-    .message {
+    .header {
         @include themify() {
-            color: theme('messageFontColor');
-        }
-
-        .header {
-            @include themify() {
-                color: theme('messageHeaderColor');
-            }
+            background: theme('headerBackground');
         }
     }
 
-    //ui input values colors
-    input {
+    //Card.Content
+    .content {
         @include themify() {
-            color: theme('inputTextColor');
-            background-color: theme('inputBackgroundColor');
+            background-color: theme('');
         }
     }
 
-    .form {
-        .header {
+    label {
+        @include themify() {
+            color: theme('modalHeader');
+        }
+    }
+}
+
+//ui message attributes
+.ui.message {
+    @include themify() {
+        color: theme('messageFontColor');
+    }
+
+    .header {
+        @include themify() {
+            color: theme('messageHeaderColor');
+        }
+    }
+}
+
+//ui input values colors
+input {
+    @include themify() {
+        color: theme('inputTextColor');
+        background-color: theme('inputBackgroundColor');
+    }
+}
+
+.ui.form {
+    .header {
+        @include themify() {
+            color: theme('mainColor');
+            background:theme('')
+        }
+    }
+
+    .content {
+        @include themify() {
+            color: theme('mainColor');
+            background:theme('')
+        }
+    }
+
+    .image {
+        @include themify() {
+            color: theme('mainColor');
+            background:theme('')
+        }
+    }
+
+    .header {
+        @include themify() {
+            color: theme('mainColor');
+            background:theme('')
+        }
+    }
+
+    //button in the 
+    .field {
+        .button-confirm {
             @include themify() {
-                color: theme('mainColor');
+                background-color: theme('buttonSuccess')                
             }
         }
 
-        .content {
+        .button-confirm:hover {
             @include themify() {
-                color: theme('mainColor');
-            }
-        }
-
-        .image {
-            @include themify() {
-                color: theme('mainColor');
-            }
-        }
-
-        .header {
-            @include themify() {
-                color: theme('mainColor');
-            }
-        }
-        //button in the 
-        .field {
-            .button-confirm {
-                @include themify() {
-                    background-color: theme('buttonSuccess')
-                }
-            }  
-            .button-confirm:hover {
-                @include themify() {
-                    background-color: theme('mainColor')
-                }
-            }  
-        } 
-
-        .content {
-            @include themify() {
-                color: theme('mainColor');
-            }
-        }
-
-        .fields {
-
-            align-items: center;
-            justify-content: center;    
-
-            label {
-                @include themify() {
-                    color: theme('mainColor');
-                }
-            }
-    
-            input {
-                @include themify() {
-                    color: theme('inputTextColor') !important;
-                    background: theme('inputBackgroundColor') !important;
-                    // background: ('inputBackgroundColor');
-                }
-            }    
-            .menu {
-                @include themify() {
-                    color: theme('mainColor');
-                }
+                background-color: theme('mainColor')
             }
         }
     }
 
-    .label {
+    .content {
         @include themify() {
             color: theme('mainColor');
         }
     }
 
-    .modal {
-        .header {
+    .fields {
+
+        align-items: center;
+        justify-content: center;
+
+        label {
             @include themify() {
                 color: theme('mainColor');
             }
         }
 
-        .content {
+        input {
             @include themify() {
-                color: theme('');
+                color: theme('inputTextColor') !important;
+                background: theme('inputBackgroundColor') !important;
+                // background: ('inputBackgroundColor');
             }
         }
 
-        .image {
-            @include themify() {
-                color: theme('mainColor');
-            }
-        }
-    }
-
-    .items {
-        .header {
-            @include themify() {
-                color: theme('mainColor');
-            }
-        }
-
-        .content {
-            @include themify() {
-                color: theme('mainColor');
-            }
-        }
-
-        .image {
+        .menu {
             @include themify() {
                 color: theme('mainColor');
             }
         }
     }
 }
+
+.ui.modal {
+    .header {
+        @include themify() {
+            color: theme('mainColor');
+        }
+    }
+
+    .content {
+        @include themify() {
+            color: theme('');
+        }
+    }
+
+    .image {
+        @include themify() {
+            color: theme('mainColor');
+        }
+    }
+}
+
+.ui.items {
+    .header {
+        @include themify() {
+            color: theme('mainColor');
+        }
+    }
+
+    .content {
+        @include themify() {
+            color: theme('mainColor');
+        }
+    }
+
+    .image {
+        @include themify() {
+            color: theme('mainColor');
+        }
+    }
+}
+
+.button {
+    @include themify() {
+        background: theme('mainColor')
+    }
+}
+
